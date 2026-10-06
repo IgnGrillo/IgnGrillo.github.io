@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Ignacio Grillo — Portfolio</title>
+<meta name="description" content="Senior Unity Engineer. Games I have worked on: Stumble Guys, MARVEL Strike Force, Word Crack, Paper Birds, EverForest and more.">
+<meta property="og:title" content="Ignacio Grillo — Senior Unity Engineer">
+<meta property="og:description" content="Mobile, PC & XR · Live games. Portfolio of shipped titles and independent work.">
+<meta property="og:image" content="img/yass.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1419; --card: #171d25; --ink: #eef1f5; --muted: #9aa4b1; --line: #2a333f;
+    --accent: #6ea4e8; --accent-ink: #0f1419; --navy: #0b1526;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #1a1a1a; --muted: #5b6470; --line: #e3e7ec;
+    --accent: #1a4f8b; --accent-ink: #ffffff; --navy: #102038;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, "Segoe UI", system-ui, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { background: var(--navy); color: #fff; padding: 56px 16px 48px; }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  header h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 6px; letter-spacing: -0.3px; }
+  header .tag { font-size: clamp(16px, 2.6vw, 20px); font-weight: 600; color: #cfe0f7; margin: 0 0 14px; }
+  header p.intro { max-width: 720px; color: #d9e1ec; margin: 0 0 20px; font-size: 16px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a { display: inline-block; padding: 9px 14px; border-radius: 8px; background: rgba(255,255,255,0.10); color: #fff; font-weight: 500; font-size: 14px; border: 1px solid rgba(255,255,255,0.18); }
+  .links a.primary { background: #fff; color: var(--navy); border-color: #fff; }
+  .links a:hover { text-decoration: none; background: rgba(255,255,255,0.18); }
+  .links a.primary:hover { background: #e8eef7; }
+
+  main { padding: 36px 16px 64px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--muted); margin: 28px 0 14px; }
+  .grid { display: flex; flex-direction: column; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: row; min-height: 200px; }
+  .media { flex: 0 0 300px; background: #0d1a2e; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .media.icon { background: linear-gradient(135deg, #142a4a, #1a4f8b); }
+  .media.icon img { width: 44%; height: auto; border-radius: 18%; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  .media.icons { gap: 10px; padding: 0 16px; background: linear-gradient(135deg, #142a4a, #1a4f8b); flex-wrap: wrap; }
+  .media.icons img { width: 36%; height: auto; border-radius: 18%; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  .media.text { background: linear-gradient(135deg, #1b2736, #34506f); color: #dbe6f3; font-weight: 700; font-size: 24px; letter-spacing: 0.5px; text-align: center; padding: 0 16px; }
+  .body { padding: 18px 22px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 0; }
+  .card h3 { margin: 0; font-size: 19px; }
+  .meta { color: var(--muted); font-size: 13.5px; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .card ul { margin: 2px 0 0; padding-left: 18px; font-size: 14.5px; }
+  .card li { margin-bottom: 4px; }
+  .card .foot { margin-top: auto; padding-top: 8px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .pill { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--line); color: var(--muted); }
+  @media (max-width: 640px) {
+    .card { flex-direction: column; min-height: 0; }
+    .media { flex: none; aspect-ratio: 16 / 9; width: 100%; }
+    .media.icon img { width: auto; height: 62%; }
+    .media.icons img { width: 20%; }
+  }
+
+  footer { padding: 24px 16px 40px; color: var(--muted); font-size: 13.5px; text-align: center; border-top: 1px solid var(--line); }
+  @media (max-width: 480px) { header { padding: 40px 16px 36px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Ignacio Grillo</h1>
+    <p class="tag">Senior Unity Engineer · Mobile, PC &amp; XR · Live Games</p>
+    <p class="intro">Nine years shipping and maintaining games in Unity and C#. I join existing teams and codebases to stabilize live products, clear legacy and store-compliance issues, and ship gameplay, UI and monetization features on deadline. Based in Buenos Aires (UTC−3), Argentine and Italian (EU) citizen, open to remote work or relocation within the EU.</p>
+    <div class="links">
+      <a class="primary" href="Ignacio-Grillo-CV.pdf">Download CV (PDF)</a>
+      <a href="mailto:igngrillo@gmail.com">igngrillo@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ignacio-grillo">LinkedIn</a>
+      <a href="https://igngrillo.itch.io">itch.io</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h2>Independent</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="media"><img src="img/yass.jpg" alt="YASS title screen"></div>
+      <div class="body">
+        <h3>YASS</h3>
+        <div class="meta"><b>Solo project</b> · 2026 · Design, code, release</div>
+        <ul>
+          <li>Top-down shooter-looter designed, built and published solo in 30 days, playable in the browser and on Windows (Unity 6, URP 2D).</li>
+          <li>Procedurally rolled weapons, two characters, two floors, enemy ailments and run-long difficulty modifiers.</li>
+          <li>Built with AI coding agents (Claude Code, Codex) as daily programming partners, with a documented architecture and daily changelog.</li>
+        </ul>
+        <div class="foot"><a href="https://igngrillo.itch.io/yass">Play on itch.io</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media text">In development</div>
+      <div class="body">
+        <h3>Co-op space game</h3>
+        <div class="meta"><b>With friends</b> · 2026 · Gameplay and networking</div>
+        <ul>
+          <li>2D online co-op game in Unity and Photon Fusion: get your ship and its cargo to the destination, whatever happens to your friends.</li>
+        </ul>
+        <div class="foot"><span class="pill">Unity</span><span class="pill">Photon Fusion</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Live-ops and co-development</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="media icon"><img src="img/stumble.jpg" alt="Stumble Guys icon"></div>
+      <div class="body">
+        <h3>Stumble Guys</h3>
+        <div class="meta"><b>Scopely, via Trick Studio</b> · 2023–2024 · Technical Lead</div>
+        <ul>
+          <li>Led a 9-person cross-discipline pod inside the live-ops team of a 100M+ download game, owning the in-game messaging that steers player cohorts to new features and store offers.</li>
+          <li>Revamped the popup system to be data-driven, so designers and marketing ship content without a new build; shipped 4 new popup types on it.</li>
+          <li>Implemented deep linking into screens never designed to open outside their original flow; later adopted by other pods.</li>
+        </ul>
+        <div class="foot"><a href="https://www.stumbleguys.com/">stumbleguys.com</a><a href="https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies">Google Play</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media icon"><img src="img/msf.jpg" alt="MARVEL Strike Force icon"></div>
+      <div class="body">
+        <h3>MARVEL Strike Force</h3>
+        <div class="meta"><b>Scopely, via Trick Studio</b> · 2024 · Technical Lead</div>
+        <ul>
+          <li>Cleared a backlog of legacy bugs and technical debt in UI layout and character VFX on a 50M+ download live game.</li>
+          <li>Took the harder bugs and helped teammates diagnose issues with the Unity Profiler.</li>
+        </ul>
+        <div class="foot"><a href="https://marvelstrikeforce.com">marvelstrikeforce.com</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media icon"><img src="img/everforest.jpg" alt="EverForest icon"></div>
+      <div class="body">
+        <h3>EverForest</h3>
+        <div class="meta"><b>Carbon Counts, via Dedalord</b> · 2024–2025 · Senior Software Engineer</div>
+        <ul>
+          <li>A year on a live mobile game in a 12-person team.</li>
+          <li>Led and implemented the in-game store redesign: virtual currencies, bundles and in-app purchases.</li>
+          <li>Built parts of the seasonal events and the progression revamp.</li>
+        </ul>
+        <div class="foot"><a href="https://www.carboncounts.tech/play-to-plant">carboncounts.tech</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media icons">
+        <img src="img/runningfred.jpg" alt="Running Fred icon">
+        <img src="img/superfalling.jpg" alt="Super Falling Fred icon">
+        <img src="img/skiing.jpg" alt="Skiing Fred icon">
+        <img src="img/stuntjack.jpg" alt="SuperSonic Jack icon">
+      </div>
+      <div class="body">
+        <h3>Running Fred, Super Falling Fred, Skiing Fred, SuperSonic Jack</h3>
+        <div class="meta"><b>Dedalord</b> · 2025–2026 · Senior Software Engineer</div>
+        <ul>
+          <li>Kept four live titles (15M+ combined downloads) on Google Play and the App Store by meeting a hard delisting deadline.</li>
+          <li>Upgraded Unity to the 2025 security patch, fixed legacy bugs, resolved store compliance issues and helped migrate ads from AdMob to ironSource.</li>
+        </ul>
+        <div class="foot">
+          <a href="https://play.google.com/store/apps/details?id=com.dedalord.runningfred">Running Fred</a>
+          <a href="https://play.google.com/store/apps/details?id=com.dedalord.superfallingfred">Super Falling Fred</a>
+          <a href="https://play.google.com/store/apps/details?id=com.dedalordnorth.skiingfred">Skiing Fred</a>
+          <a href="https://play.google.com/store/apps/details?id=com.dedalord.stuntjack">SuperSonic Jack</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media icons">
+        <img src="img/wordcrack.jpg" alt="Word Crack icon">
+        <img src="img/triviaretro.jpg" alt="Trivia Crack Retro Quiz icon">
+      </div>
+      <div class="body">
+        <h3>Word Crack &amp; Trivia Crack Retro Quiz</h3>
+        <div class="meta"><b>Etermax</b> · 2022–2023 · Software Engineer</div>
+        <ul>
+          <li>Live-ops on Word Crack: shipped a new in-game word dictionary feature with the live-ops team.</li>
+          <li>Bug fixing on Trivia Crack Retro Quiz.</li>
+          <li>Also at Etermax: took an unannounced live-service trivia game from prototype to a feature-complete release candidate in one year, building its core question gameplay and a Unity WebGL companion app.</li>
+        </ul>
+        <div class="foot"><a href="https://play.google.com/store/apps/details?id=com.etermax.apalabrados.lite">Word Crack</a><a href="https://play.google.com/store/apps/details?id=com.etermax.trivia.preguntados2">Trivia Crack Retro Quiz</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>XR</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="media icon"><img src="img/paperbirds.jpg" alt="Paper Birds icon"></div>
+      <div class="body">
+        <h3>Paper Birds</h3>
+        <div class="meta"><b>3DAR</b> · 2020–2021 · Software Engineer</div>
+        <ul>
+          <li>One of 4 engineers on an interactive VR short film, among the first hand-tracking experiences on Meta Quest, later released on Steam; selected at the Venice, SXSW and Tribeca festivals.</li>
+          <li>Built the core interaction systems on top of the OVR and OpenXR SDKs, using Oculus hand tracking while it was still pre-release.</li>
+          <li>Optimized rendering, memory and asset streaming for Quest hardware, and ported the project to HTC Vive for its Steam release.</li>
+        </ul>
+        <div class="foot"><a href="https://www.meta.com/experiences/paper-birds/3723136981093558/">Meta Quest Store</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="media text">BioSquad</div>
+      <div class="body">
+        <h3>BioSquad</h3>
+        <div class="meta"><b>Coto</b> · 2018–2020 · Software Engineer</div>
+        <ul>
+          <li>Networked VR shooter for up to 30 simultaneous players on Oculus Rift, built on UNet.</li>
+          <li>Built gameplay, in-game UI and multiplayer features, and Unity editor tools so designers could configure waves, encounters and sessions without code.</li>
+        </ul>
+        <div class="foot"><span class="pill">Oculus Rift</span><span class="pill">UNet</span></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Ignacio Grillo · <a href="mailto:igngrillo@gmail.com">igngrillo@gmail.com</a> · <a href="https://www.linkedin.com/in/ignacio-grillo">LinkedIn</a> · <a href="https://igngrillo.itch.io">itch.io</a><br>
+  Game artwork belongs to its respective publishers and is shown here only to identify the projects.
+</footer>
+
+</body>
+</html>
